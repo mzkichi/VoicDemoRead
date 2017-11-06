@@ -11,12 +11,12 @@ import AVFoundation
 
 class ViewController: UIViewController, AVSpeechSynthesizerDelegate{
     
+    @IBOutlet weak var recipe: UITextField!
     @IBOutlet weak var playButton: UIButton!
-    var recipe = "ボウルにはくりきこをふるい入れ、泡立てきで混ぜます"
     
     @IBAction func readRecipe(_ sender: Any) {
         let synthesizer = AVSpeechSynthesizer()
-        let utterance = AVSpeechUtterance(string: recipe)
+        let utterance = AVSpeechUtterance(string: recipe.text!)
         utterance.voice  = AVSpeechSynthesisVoice(language: "ja-JP")
         synthesizer.speak(utterance)
     }

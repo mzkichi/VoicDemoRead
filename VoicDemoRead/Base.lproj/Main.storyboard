@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,9 +28,21 @@
                                     <action selector="readRecipe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cim-GV-lDd"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hzd-fY-Zih">
+                                <rect key="frame" x="37.5" y="318.5" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Dsj-oH-nxT"/>
+                                    <constraint firstAttribute="width" constant="300" id="wRI-CV-ufn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Hzd-fY-Zih" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BfG-Qb-qXH"/>
+                            <constraint firstItem="Hzd-fY-Zih" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b4s-qb-tm5"/>
                             <constraint firstItem="ues-kx-FFR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="juR-56-NjD"/>
                             <constraint firstItem="ues-kx-FFR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="80" id="o80-Mc-XiV"/>
                         </constraints>
@@ -38,6 +50,7 @@
                     </view>
                     <connections>
                         <outlet property="playButton" destination="ues-kx-FFR" id="PzF-L3-Ck4"/>
+                        <outlet property="recipe" destination="Hzd-fY-Zih" id="ccr-hQ-xC3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
